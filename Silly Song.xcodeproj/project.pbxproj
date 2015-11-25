@@ -284,6 +284,7 @@
 				A1FD7AC51C037C2B0082B88B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
