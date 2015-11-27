@@ -116,15 +116,7 @@ class ViewController: UIViewController {
         //check if first letter is a, f, m
         for char in lowerCaseName.characters {
             switch char {
-            case "b":
-                if let charRange = lowerCaseName.rangeOfCharacterFromSet(specialCharSet) {
-                    return lowerCaseName.substringFromIndex(charRange.startIndex.successor())
-                }
-            case "f":
-                if let charRange = lowerCaseName.rangeOfCharacterFromSet(specialCharSet) {
-                    return lowerCaseName.substringFromIndex(charRange.startIndex.successor())
-                }
-            case "m":
+            case "b", "f", "m":
                 if let charRange = lowerCaseName.rangeOfCharacterFromSet(specialCharSet) {
                     return lowerCaseName.substringFromIndex(charRange.startIndex.successor())
                 }
@@ -143,13 +135,7 @@ class ViewController: UIViewController {
         var finalTemplate:String = ""
         for char in lowercaseFullName.characters {
             switch char {
-            case "b":
-                finalTemplate = specialSong.stringByReplacingOccurrencesOfString("<FULL_NAME>", withString: fullName).stringByReplacingOccurrencesOfString("<SHORT_NAME>", withString: shortName(fullName))
-                return finalTemplate
-            case "f":
-                finalTemplate = specialSong.stringByReplacingOccurrencesOfString("<FULL_NAME>", withString: fullName).stringByReplacingOccurrencesOfString("<SHORT_NAME>", withString: shortName(fullName))
-                return finalTemplate
-            case "m":
+            case "b", "f", "m":
                 finalTemplate = specialSong.stringByReplacingOccurrencesOfString("<FULL_NAME>", withString: fullName).stringByReplacingOccurrencesOfString("<SHORT_NAME>", withString: shortName(fullName))
                 return finalTemplate
             default:
